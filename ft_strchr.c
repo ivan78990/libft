@@ -1,32 +1,29 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 13:12:11 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 15:22:45 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int ch)
 {
-	size_t i;
+	int i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == ch)
-			return ((char *)str + i);
+		if (str[i] == (char)ch)
+			return ((char*)(str + i));
 		i++;
 	}
-	return(NULL);
-}
-
-int	main()
-{
-	char a[11] = "0123456789";
-	int b = '9';
-	char *c;
-
-	c = ft_strchr(a,b);
-	// if (c == NULL)
-	// 	printf("символ не найден\n");
-	// else
-	// 	printf("символ на позиции %ld\n", c - a + 1 );
-	printf("символ на позиции %ld\n", c - a + 1 );
-
-	return 0;
+	if (str[i] == (char)ch)
+		return ((char*)(str + i));
+	return (NULL);
 }

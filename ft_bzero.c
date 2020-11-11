@@ -1,5 +1,15 @@
-//#include <stdio.h>
-//#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 11:47:32 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 11:47:36 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
@@ -13,13 +23,3 @@ void	ft_bzero(void *str, size_t n)
 		i++;
 	}
 }
-
-// int main()
-// {
-// 	char a[15] = "1234567890";
-// 	int dl = 5;
-
-// 	printf("%s\n",ft_bzero(a, dl));
-
-// 	return 0;
-// }

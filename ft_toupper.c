@@ -1,19 +1,20 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 13:02:53 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 13:04:34 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		c =  c - 32;
+		c = c - 32;
 	return (c);
-}
-
-int	main()
-{
-	char a = 'a';
-
-	printf("%c\n",ft_toupper(a));
-	return 0;
 }

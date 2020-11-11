@@ -1,9 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 12:48:58 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 12:51:14 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -11,19 +18,4 @@ int	ft_isalpha(int c)
 		return (1);
 	else
 		return (0);
-}
-
-
-int	main()
-{
-	char a = '0';
-	// char b[24] = "019234956789";
-	
-	// if (c == NULL)
-	// 	printf("символ не найден\n");
-	// else
-	// // 	printf("символ на позиции %ld\n", c - a + 1 );
-		printf("result_my %d\n",ft_isalpha(a));
-		printf("result_real %d\n",isalpha(a));
-	return 0;
 }

@@ -1,27 +1,29 @@
-#include <stdio.h>
-#include <string.h>
-void ft_memcpy(void *dest, void *src, size_t len)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 10:56:29 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 11:31:48 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while(i < len)
+	if (dst || src)
 	{
-		((unsigned char*)dest)[i] = ((unsigned char*)src)[i];
-		i++;
-		// printf("%s\n", dest);	
-	}		
-	// printf("my func: 	%s\n", dest );
-	// printf("real: 		%s\n", memcpy(dest, src, 5));
+		while (i < n)
+		{
+			((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
+			i++;
+		}
+	}
+	return (dst);
 }
-
-// int main()
-// {
-// 	char a[15] = "1234567890";
-// 	char b[15] = "";
-// 	int dl = 10;
-
-// 	ft_memcpy(b, a, dl);
-
-// 	return 0;
-// }

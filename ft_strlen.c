@@ -1,6 +1,18 @@
-#include <stdio.h>
-#include <string.h>
-int	ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 12:45:31 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 12:47:09 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int i;
 
@@ -9,13 +21,5 @@ int	ft_strlen(char *str)
 	{
 		i++;
 	}
-	return(i);
-}
-
-int	main()
-{
-	char *a = "1247824774";
-	ft_strlen(a);
-	printf("%d\n",ft_strlen(a));
-	return 0;
+	return (i);
 }

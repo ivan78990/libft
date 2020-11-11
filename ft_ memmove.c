@@ -40,7 +40,7 @@ int main (void)
    //printf ("my: %s\n", dst);
    ft_memmove(&src[4], &src[9], 1);
    printf ("new: %s\n", src);
-   // memmove(&src[4], &src[9], 1);
+   memmove(&src[4], &src[9], 1);
    // printf ("new: %s\n", src);
 
    return 0;

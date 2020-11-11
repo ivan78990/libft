@@ -1,9 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 12:52:07 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 12:53:04 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -11,19 +18,4 @@ int	ft_isdigit(int c)
 		return (1);
 	else
 		return (0);
-}
-
-
-int	main()
-{
-	char a = '+';
-	// char b[24] = "019234956789";
-	
-	// if (c == NULL)
-	// 	printf("символ не найден\n");
-	// else
-	// // 	printf("символ на позиции %ld\n", c - a + 1 );
-		printf("result_my %d\n",ft_isdigit(a));
-		printf("result_real %d\n",isdigit(a));
-	return 0;
 }

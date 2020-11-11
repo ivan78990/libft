@@ -1,9 +1,18 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/11 13:01:01 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/11 13:01:31 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int			ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);
