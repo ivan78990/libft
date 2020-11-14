@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/12 10:36:31 by warchang          #+#    #+#             */
-/*   Updated: 2020/11/12 12:28:30 by warchang         ###   ########.fr       */
+/*   Created: 2020/11/13 14:04:47 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/13 14:04:54 by warchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	k;
 
-	if (!*s2)
-		return ((char*)s1);
+	if (!src && !dst)
+		return (0);
 	i = 0;
-	while (i < len && s1[i])
+	k = ft_strlen(src);
+	if (size)
 	{
-		j = 0;
-		if (s1[i] == s2[j])
+		while (--size && src[i])
 		{
-			while (s1[i + j] == s2[j] && (i + j) < len)
-			{
-				j++;
-				if (s2[j] == 0)
-					return ((char*)&s1[i]);
-			}
+			dst[i] = src[i];
+			i++;
 		}
-		i++;
+		dst[i] = '\0';
 	}
-	return (NULL);
+	return (k);
 }

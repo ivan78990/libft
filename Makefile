@@ -15,16 +15,19 @@ SRCS  = ft_memset.c \
 	   	ft_tolower.c \
 	   	ft_strchr.c \
 	   	ft_strrchr.c \
+	   	ft_strnstr.c \
+	   	ft_strncmp.c \
+	   	ft_strlcat.c \
+	   	ft_strlcpy.c \
 	   # ft_nstrlen.c \
 	   # ft_strdup.c \
 	   # ft_strcpy.c \
 	   # ft_strncpy.c \
 	   # ft_strcat.c \
 	   # ft_strncat.c \
-	   # ft_strlcat.c \
+
 	   # ft_strstr.c \
-	   # ft_strnstr.c \
-	   # ft_strcmp.c \
+
 	   # ft_strncmp.c \
 	   # ft_strrev.c \
 	   # ft_atoi.c \

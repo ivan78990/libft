@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: warchang <warchang@student.21-schoo>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/13 14:09:06 by warchang          #+#    #+#             */
+/*   Updated: 2020/11/13 14:12:19 by warchang         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
@@ -29,15 +29,4 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	if (j != size)
 		dst[j + k] = '\0';
 	return (j + ft_strlen(src));
-}
-
-int main()
-{
-	char a[20] = "bonjour";
-	char b[100] = "saluta";
-
-	// strlcat(a, b, 20);
-	printf("%zu\n",strlcat(a, b, 20));
-	printf("%zu\n",ft_strlcat(a, b, 20));
-	return 0;
 }
